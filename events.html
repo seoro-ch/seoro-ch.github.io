@@ -65,6 +65,61 @@
 	<script src="js/respond.min.js"></script>
 	<![endif]-->
 
+	<style>
+		.white-popup-block {
+		  position: relative;
+		  background: #FFF;
+		  padding: 20px;
+		  width: auto;
+		  max-width: 500px;
+		  margin: 20px auto;
+		}
+
+		/**
+		 * Simple fade transition,
+		 */
+		.mfp-fade.mfp-bg {
+			opacity: 0;
+			-webkit-transition: all 0.15s ease-out; 
+			-moz-transition: all 0.15s ease-out; 
+			transition: all 0.15s ease-out;
+		}
+		.mfp-fade.mfp-bg.mfp-ready {
+			opacity: 0.8;
+		}
+		.mfp-fade.mfp-bg.mfp-removing {
+			opacity: 0;
+		}
+
+		.mfp-fade.mfp-wrap .mfp-content {
+			opacity: 0;
+			-webkit-transition: all 0.15s ease-out; 
+			-moz-transition: all 0.15s ease-out; 
+			transition: all 0.15s ease-out;
+		}
+		.mfp-fade.mfp-wrap.mfp-ready .mfp-content {
+			opacity: 1;
+		}
+		.mfp-fade.mfp-wrap.mfp-removing .mfp-content {
+			opacity: 0;
+		}
+	</style>
+
+	<script type="text/javascript">
+		$(function () {
+			$('.popup-modal').magnificPopup({
+				type: 'inline',
+				preloader: false,
+				focus: '',
+				modal: true
+			});
+			$(document).on('click', '.popup-modal-dismiss', function (e) {
+				e.preventDefault();
+				$.magnificPopup.close();
+			});
+		});
+	</script>
+
 	</head>
 	<body>
 		
@@ -142,28 +197,78 @@
 						<a href="#">Read More <i class="icon-arrow-right3"></i></a>
 					</div>
 				</div>
-				<div class="col-md-4 animate-box">
-					<div class="events-entry">
-						<span class="date">March 10, 2017</span>
-						<h3><a href="#">Message From God</a></h3>
-						<p>Facilis ipsum reprehenderit nemo molestias. Aut cum mollitia reprehenderit. Eos cumque dicta adipisci architecto culpa amet.</p>
-						<a href="#">Read More <i class="icon-arrow-right3"></i></a>
+				
+				<div class="col-md-3 animate-box">
+					<div class="news">
+						<a href="#" class="img-holder"><img class="img-responsive" src="images/20190326.jpg" alt="Free HTML5 Website Template by freehtml5.co"></a>
+						<div class="desc">
+							<span class="date">2019.03.26(화)</span>
+							<h3>마 21:1-11 겸손하게 십자가의 길을 뒤따르는 나귀</h3>
+							<p>예수님이 나귀와 나귀 새끼를 끌고 오라고 하십니다. 제자들이 명하신 대로 나귀와 나귀 새끼를 모두 끌고 왔습니다. 예수님이 그 위에 타셨습니다. 예수님이 타신 것은 나귀일까요, 나귀 새끼일까요? ‘그 위에’라고 번역된 말은 직역하면 ‘그것들 위에’입니다. 설마 예수님이 두 마리를 동시에 타고 가신 것일까요?</p>
+							<a class="popup-modal" href="#modal2">더보기 <i class="icon-arrow-right3"></i></a>
+							<div id="modal2" class="mfp-hide white-popup-block">
+								<h3>마 21:1-11 겸손하게 십자가의 길을 뒤따르는 나귀</h3>
+								<h4>찬송 339장 내 주님 지신 십자가</h4>
+								<p>예수님이 나귀와 나귀 새끼를 끌고 오라고 하십니다. 제자들이 명하신 대로 나귀와 나귀 새끼를 모두 끌고 왔습니다. 예수님이 그 위에 타셨습니다. 예수님이 타신 것은 나귀일까요, 나귀 새끼일까요? ‘그 위에’라고 번역된 말은 직역하면 ‘그것들 위에’입니다. 설마 예수님이 두 마리를 동시에 타고 가신 것일까요?</p>
+<p>스가랴 9:9절은 예수님께서 나귀 새끼를 타실 것이라고 예언했습니다. 마가복음, 누가복음, 요한복음의 기록에도 분명히 나귀 새끼를 타셨다고 나와 있습니다. [스가랴 9:9] 시온의 딸아 크게 기뻐할지어다 예루살렘의 딸아 즐거이 부를지어다 보라 네 왕이 네게 임하시나니 그는 공의로우시며 구원을 베푸시며 겸손하여서 나귀를 타시나니 나귀의 작은 것 곧 나귀 새끼니라.</p>
+<p>그런데 예수님은 나귀 새끼를 탔지만, 옆에 나귀를 대동하고 함께 가신 것이 분명해 보입니다. 혹은 나귀를 타고 나귀 새끼를 대동하셨을 수도 있습니다. 그래서 오늘 본문 7절에서 ‘그것들 위에 타시니’라고 표현한 것입니다.</p>
+<p>왜 예수님은 나귀와 나귀 새끼를 다 끌고 오게 하시고, 그 둘을 함께 타고 가시는 장면을 연출하시는 것일까요?</p>
+<p>십자가를 향하여 나아가고 계시는 예수님이 그 십자가의 길에 우리를 초청하시는 것입니다. 그 길이 우리를 데리고 함께 가는 길임을 보여주시는 것입니다.</p>
+<p>무리들은 아무 생각 없이 자기들의 겉옷을 나귀 위에 얹었지만, 그것은 예수님의 십자가의 길에 그들이 동참하게 될 것임을 보여주는 그림입니다.</p>
+<p>예수님은 스스로 죄인의 모습으로 낮아지셔서 십자가의 자리로 가십니다. 나귀가 되어 그 길을 가십니다. 그런데 그 길에 나귀 새끼를 대동하고 가십니다. 우리에게 십자가의 길로 함께 가자고 초정하시는 것입니다. 피가 흐르는 그 자리, 십자가 앞에서 피의 진노를 받을 수밖에 없는 죄인임을 고백하는 자리, 나귀 새끼처럼 겸손하게 엎드려 애통하는 그 자리가 오히려 새생명이 흐르는 자리이기 때문입니다.</p>
+<p>주님, 나귀처럼, 나귀 새끼처럼 주님이 어디를 가시든지 꼭 붙어 따라다니기 원합니다. 십자가의 길까지 함께 따라가기를 원합니다. 아멘!</p>
+								<p><a class="popup-modal-dismiss" href="#">닫기</a></p>
+							</div>
+						</div>
 					</div>
 				</div>
-				<div class="col-md-4 animate-box">
-					<div class="events-entry">
-						<span class="date">March 20, 2017</span>
-						<h3><a href="#">Message From God</a></h3>
-						<p>Facilis ipsum reprehenderit nemo molestias. Aut cum mollitia reprehenderit. Eos cumque dicta adipisci architecto culpa amet.</p>
-						<a href="#">Read More <i class="icon-arrow-right3"></i></a>
+				<div class="col-md-3 animate-box">
+					<div class="news">
+						<a href="#" class="img-holder"><img class="img-responsive" src="images/20190325.jpg" alt="Free HTML5 Website Template by freehtml5.co"></a>
+						<div class="desc">
+							<span class="date">2019.3.25(월)</span>
+							<h3>마 20:17-34 지체적 삶의 원리</h3>
+							<p>이방인들, 곧 하나님을 믿지 않는 자들의 삶의 원리와 천국의 삶의 원리는 다르다고 말씀하십니다.</p>
+							<a class="popup-modal" href="#modal3">더보기 <i class="icon-arrow-right3"></i></a>
+							<div id="modal3" class="mfp-hide white-popup-block">
+								<h3>마 20:17-34 지체적 삶의 원리</h3>
+								<h4>찬송 595장 나 맡은 본분은</h4>
+								<p>이방인들, 곧 하나님을 믿지 않는 자들의 삶의 원리와 천국의 삶의 원리는 다르다고 말씀하십니다.​</p>
+​​​​<p>이방인들의 삶의 원리는 ‘개체적’ 삶의 원리입니다. 이것은 각자의 삶이 별개로 존재하는 그런 삶입니다. 서로 영향을 전혀 받지 않는 것은 아니지만, 결정적으로 중요한 삶의 원리는 자기의 삶은 자신이 책임져야 한다는 것입니다. 내 인생과 네 인생이 궁극적으로는 별개의 삶이라고 여기는 인생관이 이방인들의 인생관입니다. 그래서 내 인생을 위해서 다른 사람들의 인생을 이용할 수도 있습니다. 다른 사람을 낮춤으로써 자신이 높아진다는 사고방식이 나타납니다.​</p>
+​​​<p>그러나 천국 백성의 삶의 원리는 ‘지체적’ 삶의 원리입니다. 천국의 삶은 한 아버지 아래 모두가 형제가 되는 삶이요, ‘한 머리에 붙은 한 몸의 지체’로서의 삶입니다. 한 몸에 붙은 지체는 다른 지체와 결코 별개로 존재할 수 없습니다. 별개의 삶을 살 수 없습니다. 다른 지체가 낮아져야 내가 높아지는 그런 일은 일어나지 않습니다. 반대입니다. 다른 지체가 건강하고 훌륭해지면 나도 덩달아서 건강해지고 훌륭해집니다. 한 몸이기 때문입니다. 한 가족이기 때문입니다.</p>
+​​​<p>개체로 사는 존재들의 삶 가운데서는, 힘센 개체는 오히려 가만히 있고 힘이 약한 개체가 더 많이 일해야 하는 부조리(?)가 발생합니다. 그러나 지체로 사는 존재들의 경우는 힘세고 큰 자가 더 많이 일하는 것이 마땅합니다. 그래야 전체 몸이 더 건강하고 튼튼해지니까요.​</p>
+​​​<p>머리가 그렇게 시킵니다. 머리이신 예수님께서 이렇게 말씀하십니다. “너희 중에는 그렇지 않아야 하나니 너희 중에 누구든지 크고자 하는 자는 너희를 섬기는 자가 되고 너희 중에 누구든지 으뜸이 되고자 하는 자는 너희의 종이 되어야 하리라.​</p>
+​​​<p>머리이신 예수님이 온 몸을 위하여 가장 큰 종으로 섬겨주심으로써, 자신을 십자가에 내어주심으로써; 우리로 하여금 천국 공동체의 삶을 다시 시작할 수 있는 기초를 마련해 주셨습니다. 처음부터 사람을 만드신 목적이 둘이 하나가 되는 사랑의 나라를 만들기 위함이었습니다. 삼위 하나님의 사랑의 나라에 참여하도록 피조물을 초청하신 것입니다. 거기에 초청된 유일한 피조물이 인간입니다. 얼마나 큰 영광이요, 은혜인지요.​</p>
+​​<p>죄로 인해 머리와의 연합이 끊어짐으로써, 개체의 삶을 끊임없이 추구하게 된 것이, 바로 이 땅의 우리 삶의 모습입니다. 눈을 뜨라고 하십니다. 사람을 지으신 이가 본래 그들을 남자와 여자로 지으셨다고 하십니다. 본래 우리는 둘이 따로 따로가 아니고, 둘이 하나로 살도록, 그래야 행복하도록 지음 받았습니다. 그래야 생명력이 강화되도록 지음 받았습니다.​</p>
+​<p>주님, 눈 뜨기를 원하나이다. 지체적 삶의 행복과 생명력을, 그 삶의 탁월함과 영광스러움을 보게 하옵소서. 기꺼이 자신을 더 많이 희생하고 더 많이 사용하는 지체가 되게 하옵소서!</p>
+								<p><a class="popup-modal-dismiss" href="#">닫기</a></p>
+							</div>
+						</div>
 					</div>
 				</div>
-				<div class="col-md-4 animate-box">
-					<div class="events-entry">
-						<span class="date">March 30, 2017</span>
-						<h3><a href="#">Message From God</a></h3>
-						<p>Facilis ipsum reprehenderit nemo molestias. Aut cum mollitia reprehenderit. Eos cumque dicta adipisci architecto culpa amet.</p>
-						<a href="#">Read More <i class="icon-arrow-right3"></i></a>
+				<div class="col-md-3 animate-box">
+					<div class="news">
+						<a href="#" class="img-holder"><img class="img-responsive" src="images/20190324.jpg" alt="Free HTML5 Website Template by freehtml5.co"></a>
+						<div class="desc">
+							<span class="date">2019.3.24(일)</span>
+							<h3>마 20:1-16 먼저 된 자 나중 되는 천국</h3>
+							<p>천국의 주인공, 천국의 중심은 언제나 하나님이십니다. 예수님이십니다. 천국이 천국 되는 것, 천국이 천국다워지는 것은; 하나님의 주권과 은혜에 의해서입니다. 이것을 이해하지 못하여 거부하거나 싫어하는 자는 천국을 누릴 수 없습니다.</p>
+							<a class="popup-modal" href="#modal4">더보기 <i class="icon-arrow-right3"></i></a>
+							<div id="modal4" class="mfp-hide white-popup-block">
+								<h3>마 20:1-16 먼저 된 자 나중 되는 천국</h3>
+								<h4>​찬송 249장 주 사랑하는 자 다 찬송할 때에</h4>
+								<p>천국의 주인공, 천국의 중심은 언제나 하나님이십니다. 예수님이십니다. 천국이 천국 되는 것, 천국이 천국다워지는 것은; 하나님의 주권과 은혜에 의해서입니다. 이것을 이해하지 못하여 거부하거나 싫어하는 자는 천국을 누릴 수 없습니다.</p>
+​<p>은혜이기 때문에; 은혜 베푸는 자의 선한 결정, 주권적 결정에 의해 나중 된 자가 먼저 되고 먼저 된 자가 나중 되는 일이 얼마든지 일어납니다. 은혜의 복음을 믿는 자만이 이것(‘은혜’)을 선하다고 여깁니다. 자신의 무가치함을 인정하는 자; 스스로를 은혜밖에는 구원의 길이 없는, ‘일만 달란트 빚진 죄인’으로 자각하는 자만이; 천국의 주인을 선하다고 인정합니다.</p>
+​​<p>일만 달란트 빚진 자가 빚을 단숨에 탕감 받은 방법은 주인의 양자가 되는 것이었습니다. 주인의 상속자가 되는 순간 그의 빚은 자동 상계가 됩니다. 아버지가 가진 권리를 그가 승계하는 순간, 그의 의무는 권리와 상계되어 소멸되는 것입니다. 그가 양자의 자리를 잃어버리게 되면 그의 빚은 고스란히 되살아 납니다.​</p>
+​​​<p>하나님이 천국을 만드시는 방법은, 모든 죄인의 빚을 다 탕감하시고 그들을 자유롭게 해 주시는 방법은, 모든 죄인을 자녀로 받아주시는 것입니다. 포도원 품꾼들에게 주신 주인의 삯이 이것입니다. 그것은 삯이 아니었습니다. 은혜였습니다.​</p>
+​​​<p>적게 수고한 자와 많이 수고한 자에게 동일한 은혜를 주시는 것에 대해 따지는 자들은, 그 은혜의 가치와 의미를 모르는 자들입니다. 그것을 단지 삯으로 여기는 자들입니다. 은혜를 자기가 일해서 받는, 마땅한 댓가로 여기는 자들은, 영원히 품꾼의 자리에서 벗어날 수 없습니다.</p>
+​<p>‘자녀가 되는 권세’를 같이 받았다면, 함께 받은 자들은 서로간에 형제가 되는 것입니다. 형제가 일한 것이 없이 삯을 받게 되는 것이 배가 아프다...? 내 형제가 일을 적게 하고도 삯을 많이 받았다면, 기뻐하고 감사해야할 일인데, 오히려 불평하다니요? 아직 형제 아닌 것입니다.​</p>
+​<p>설교 잘 하는 목사, 은사와 능력이 탁월한 목사나 권사를 부러워했습니다. 시기하는 마음이 있었습니다. '왜 내게는 그런 능력을 주시지 않는가' 하며, 하나님께 대해 원망하는 마음도 일어났습니다. 자존심도 상했습니다. 사람들에게 저 사람보다, 저 목사보다 내가 못난 것으로 비춰지는 것같아 싫었습니다.</p>
+​<p>그런데 이것이 품꾼의 마음이었습니다. 내 형님이, 내 동생이 내가 하지 못하는 일을 해 내는 것은; 자랑스러워해야 할 일이었습니다. 내가 수고할 몫을 덜어준 고마운 일이었습니다. 조금은 이런 마음을 갖게 해 주신 것에 감사를 드립니다.</p>
+​<p>주님, 우리 중에 일을 많이 하고도, 정말 열심히 신앙생활 하고도 버림받는 자가 없게 하여 주옵소서. 은혜의 복음을 망각하는 일이, 순간이라도 내게 일어나지 않게 하옵소서!</p>
+								<p><a class="popup-modal-dismiss" href="#">닫기</a></p>
+							</div>
+						</div>
 					</div>
 				</div>
 			</div>
